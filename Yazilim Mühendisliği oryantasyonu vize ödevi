@@ -1,0 +1,231 @@
+# YAZILIM-MUHENDISLIGI-ORYANTASYONU-DERSI-VIZE-ODEVI
+
+package oryantasyon_vize;
+
+import java.util.Scanner;
+
+     
+     
+
+    Videonun Linki:https://www.youtube.com/watch?v=59yz60ICCRA 
+
+    Ad-Soyad : Hasan Hüseyin KILIÇ
+    Öğrenci Numarası : 220541109
+
+
+
+public class ORYANTASYON_VİZE {
+    
+    
+    /* 
+                               -SORULAR-
+        1-Kullanıcı tarafından girilen 3 adet sayıyı toplayan program 
+        2-KUllanıcı tarafından girilen sayının karesini ve küpünü  alan program 
+        3-Kullanıcı tarafından girilen sayının faktöriyelini bulan program 
+        4-Kullanıcı tarafından girilen 10 adet sayıyı  tersten  yazdıran program 
+        5-Vize Final notu hesaplayan program 
+        6-Vücut-Kitle endeksi hesaplayan program 
+        7-klavyeden girilen N elemanlı  A dizisini bir 'k' katsayısı ile çarpıp B dizisini  oluşturan ve yazdıran program .
+        8-yıldızlarla piramit yapma 
+        9-Klavyeden girilen cumledekı istediğin harflerın yerını ve kac tane oldugnu bulan program.
+        10- soru :asagıdakı oruntuyu yapan algoritmanın kodunu yazınız 
+        *
+         *
+          *
+           *
+            * 
+             
+    
+  
+    
+        */
+ 
+    public static void main(String[] args) {
+        //1-Kullanıcı tarafından girilen 3 adet sayıyı toplayan program 
+      
+        /*Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen 3 adet sayı giriniz : ");
+        int a = klavye.nextInt();
+        int b = klavye.nextInt();
+        int c = klavye.nextInt();
+        int toplam =a+b+c;
+        System.out.println("girilen 3 adet sayının toplamı : "+ toplam );
+     
+    **************************************************************************************
+        //2-KUllanıcı tarafından girilen sayının karesini ve küpünü  alan program 
+        
+        
+        
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen bir sayı giriniz :");
+        int a = klavye.nextInt();
+        int kare = a*a;
+        int  küp = a*a*a;
+        System.out.println("Girilen sayının karesi : "+kare+" ve küpü : "+küp );
+    **************************************************************************************
+       
+        // 3-Kullanıcı tarafından girilen sayının faktöriyelini bulan program 
+
+        
+        int faktoriyel =1;
+        System.out.println("LÜtfen faktöriyelini hesaplamak istediğiniz değeri giriniz : ");
+        int a = klavye.nextInt();
+        for (int i = 1; i <=a; i++) {
+            faktoriyel = faktoriyel*i;
+        }
+        System.out.println("Faktöriyel Sonuç : "+faktoriyel);
+
+
+
+    **************************************************************************************
+        //4-Kullanıcı tarafından girilen 10 adet sayıyı  tersten  yazdıran program 
+
+
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("dizi boyutunu giriniz :");
+        int a= klavye.nextInt();
+        int[] adizi= new int[a];
+        int[] bdizi= new int[a];
+        for (int i = 0; i < adizi.length; i++) {
+            System.out.println((i+1)+". dizi giriniz :");
+            adizi[i]= klavye.nextInt();
+            bdizi[a-i-1]=adizi[i];
+        }
+        for (int i = 0; i < bdizi.length; i++) {
+            System.out.println("B("+(i+1)+"):"+bdizi[i]);
+        }
+
+
+    **************************************************************************************
+
+        //5-Vize Final notu hesaplayan program
+        
+        System.out.println("Vize notunu giriniz :");
+        double vize = klavye.nextInt();
+        System.out.println("Final notunu giriniz :");
+        double  finalll = klavye.nextInt();
+        double sonuc =  ((vize*0.4)+(finalll*0.6));
+        System.out.println("genel not ortalamanız :"+sonuc);
+    
+    **************************************************************************************
+       
+        //6-Vücut-Kitle endeksi hesaplayan program 
+        
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen kilonuzu giriniz :");
+        double kilo = klavye.nextDouble();
+        
+        System.out.println("Lütfen boyunuzu metre cinsinden giriniz :");
+        double boy = klavye.nextDouble();
+        boy=boy/100;
+        double hesapla = kilo/(boy*boy);
+        System.out.println("VKİ sonuc : "+hesapla);
+
+
+    **************************************************************************************
+
+        //7-klavyeden girilen N elemanlı  A dizisini bir 'k' katsayısı ile çarpıp B dizisini  oluşturan ve yazdıran program .
+
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen dizinin boyutunu giriniz :");
+        int dizi = klavye.nextInt();
+        System.out.println("Çarpmak istediğiniz katsayı değerini giriniz :");
+        int k = klavye.nextInt();
+        int[] A = new int[dizi];
+        int[] B = new int[dizi];
+        for (int i = 0; i < dizi; i++) {
+            System.out.println("A("+(i+1)+"):");
+            A[i]= klavye.nextInt();
+            B[i]= A[i]*k;
+        }
+        for (int i = 0; i < dizi; i++) {
+            System.out.println("B("+(i+1)+"):"+B[i]);
+        }
+
+    **************************************************************************************
+         
+        
+        //8-yıldızlarla piramit yapma 
+
+
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("kac SATIR yıldız olmasını ıstersınız ");
+        int a = klavye.nextInt();
+        for (int i = 0; i < a; i++) {
+            for (int bosluk = 0; bosluk < a-i-1; bosluk++) {
+                
+                System.out.print(" ");
+            }
+            for (int yildiz = 0; yildiz <1+(i*2); yildiz++) {
+                System.out.print("*");
+               
+                
+            }
+            System.out.println("");
+        }
+    **************************************************************************************
+
+        //9-Klavyeden girilen cumledekı istediğin harflerın yerını ve kac tane oldugnu bulan program.
+
+
+
+        //9
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen bir cümle giriniz :");
+        String cumle = klavye.nextLine();
+        System.out.println("Aradığınız harfi giriniz :");
+        String ara = klavye.nextLine();
+        char a = ara.charAt(0);
+        String[] kelime = cumle.split(" ");
+        int sayac = 0;
+        for (int i = 0; i < kelime.length; i++) {
+            for (int j = 0; j < kelime[i].length(); j++) {
+                if (kelime[i].charAt(j)==a) {
+                    System.out.println((i+1)+". kelimenin" + (j+1)+". harfi aradığınız harftir .");
+                    sayac++;
+                }
+            }
+        }
+        System.out.println("aradığınız harften toplam "+sayac+ "tane vardır.");
+       
+    ************************************************************************************************
+
+        /*10- soru :asagıdakı oruntuyu yapan algoritmanın kodunu yazınız 
+        *
+         *
+          *
+           *
+            * 
+        *//*
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("kac tane yıldız olmasını ıstersınız ");
+        int a = klavye.nextInt();
+        int bosluk =0;
+       
+        for (int i = 0; i < a; i++) {
+            
+            for (int j = 0; j < bosluk; j++) {
+                
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            bosluk++;
+            System.out.println("");
+                   
+                    
+        }*/
+        
+       
+
+      
+        
+       
+      
+                    
+        }
+        
+        
+        
+    
+    
+}
